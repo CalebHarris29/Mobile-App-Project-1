@@ -33,8 +33,6 @@ This app challenges users to guess a hidden 4-letter word within three attempts.
 ### Full Video Walkthrough
 [Watch the full walkthrough on Google Drive](https://drive.google.com/file/d/1jlCBBsNVwM6igihggq8kKr96Gsgp6HwW/view?usp=sharing)
 
-### App Demo
-<img src="demo.gif" width="300" alt="4-Letter Wordle App Demo">
 
 ## Files Overview
 - **MainActivity.kt:** Contains the game logic, theme management, and the `FourLetterWordList` word bank.
