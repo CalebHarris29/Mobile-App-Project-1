@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/streakLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Streak: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/themeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/streakLabel">
+
+        <Button
+            android:id="@+id/btnCommon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Common"
+            android:textSize="10sp" />
+        <Button
+            android:id="@+id/btnSports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sports"
+            android:textSize="10sp" />
+        <Button
+            android:id="@+id/btnSchool"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="School"
+            android:textSize="10sp" />
+        <Button
+            android:id="@+id/btnMovies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Movies"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Guess 1 -->
+    <TextView
+        android:id="@+id/guess1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guess #1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/themeLayout" />
+
+    <TextView
+        android:id="@+id/guess1Word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@id/guess1Label"
+        app:layout_constraintTop_toTopOf="@id/guess1Label"
+        tools:text="WORD" />
+
+    <TextView
+        android:id="@+id/guess1Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@id/guess1Word"
+        app:layout_constraintTop_toTopOf="@id/guess1Label"
+        tools:text="OOOO" />
+
+    <!-- Guess 2 -->
+    <TextView
+        android:id="@+id/guess2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guess #2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guess1Label" />
+
+    <TextView
+        android:id="@+id/guess2Word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@id/guess2Label"
+        app:layout_constraintTop_toTopOf="@id/guess2Label"
+        tools:text="WORD" />
+
+    <TextView
+        android:id="@+id/guess2Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@id/guess2Word"
+        app:layout_constraintTop_toTopOf="@id/guess2Label"
+        tools:text="OOOO" />
+
+    <!-- Guess 3 -->
+    <TextView
+        android:id="@+id/guess3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guess #3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guess2Label" />
+
+    <TextView
+        android:id="@+id/guess3Word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@id/guess3Label"
+        app:layout_constraintTop_toTopOf="@id/guess3Label"
+        tools:text="WORD" />
+
+    <TextView
+        android:id="@+id/guess3Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@id/guess3Word"
+        app:layout_constraintTop_toTopOf="@id/guess3Label"
+        tools:text="OOOO" />
+
+    <!-- Target Word -->
+    <TextView
+        android:id="@+id/targetWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guess3Label"
+        tools:text="TARGET"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐"
+        android:textSize="48sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/targetWord"
+        tools:visibility="visible" />
+
+    <!-- Input Area -->
+    <EditText
+        android:id="@+id/etGuess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter 4 letter word"
+        android:inputType="textCapCharacters"
+        android:maxLength="4"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="none" />
+
+    <Button
+        android:id="@+id/btnGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUESS!"
+        app:layout_constraintBottom_toBottomOf="@id/etGuess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etGuess" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
