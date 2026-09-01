@@ -29,7 +29,8 @@ This app challenges users to guess a hidden 4-letter word within three attempts.
     - Verifies guesses against the specific themed word bank.
 
 ## Walkthrough Video/GIF
-[Paste your Link/GIF here]
+https://drive.google.com/file/d/1jlCBBsNVwM6igihggq8kKr96Gsgp6HwW/view?usp=sharing
+
 
 ## Files Overview
 - **MainActivity.kt:** Contains the game logic, theme management, and the `FourLetterWordList` word bank.
